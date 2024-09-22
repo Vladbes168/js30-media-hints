@@ -1,7 +1,0 @@
-.unselectable {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Chrome/Safari/Opera */ /* Konqueror */
-  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-               not supported by any browser */
-}/*# sourceMappingURL=base.css.map */

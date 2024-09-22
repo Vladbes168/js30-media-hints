@@ -1,0 +1,210 @@
+@charset "UTF-8";
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */ /* Konqueror */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+               not supported by any browser */
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.background-song {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  filter: blur(5px);
+}
+
+.wrapper .song-image {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.player__container {
+  box-shadow: 2px 2px 15px 3px rgb(0, 0, 0);
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(59, 59, 59);
+  background: linear-gradient(90deg, rgb(59, 59, 59) 0%, rgb(101, 101, 101) 39%, rgb(106, 106, 106) 100%);
+  border-radius: 25px;
+}
+
+.btn__box {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  filter: invert(1);
+}
+.play:hover {
+  opacity: 0.75;
+}
+
+.title {
+  color: rgb(193, 255, 6);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: aliceblue;
+}
+
+.prev {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  cursor: pointer;
+}
+.prev:hover {
+  opacity: 0.75;
+}
+
+.next {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  cursor: pointer;
+}
+.next:hover {
+  opacity: 0.75;
+}
+
+#progress-bar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 5px;
+  background: #000000;
+  width: 160pt;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -3px;
+  margin-left: 0px;
+  height: 12px;
+  width: 7px;
+  border: 0;
+  background: -webkit-linear-gradient(45deg, rgb(213, 213, 213), rgb(193, 255, 6));
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.progress-bar__container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.duration-time {
+  position: absolute;
+  top: -20px;
+  right: 43px;
+  color: rgb(193, 255, 6);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.current-time {
+  position: absolute;
+  top: 7px;
+  left: 43px;
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */
