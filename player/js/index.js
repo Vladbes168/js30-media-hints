@@ -47,6 +47,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 playNum++;
                 playNum >= audioArray.length ? playNum = 0 : null;
                 songOnPage(audioArray[playNum]);
+                playAudio()
             });
         }
 
@@ -56,6 +57,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 playNum--;
                 playNum < 0 ? playNum = audioArray.length - 1 : null;
                 songOnPage(audioArray[playNum]);
+                playAudio()
             });
         }
 
